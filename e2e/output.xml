@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190509 14:34:45.378" generator="Robot 3.1.1 (Python 2.7.15rc1 on linux2)">
+<suite source="/home/ubuntu/project/test/e2e/O_login.robot" id="s1" name="O login">
+<test id="s1-t1" name="Test1 ทดสอบการเข้าหน้า เข้าสู่ระบบ">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:34:46.809" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:34:50.156" starttime="20190509 14:34:46.809"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:50.157" starttime="20190509 14:34:46.809"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>id:username</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:50.181" starttime="20190509 14:34:50.159"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>id:password</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:50.198" starttime="20190509 14:34:50.181"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:50.215" starttime="20190509 14:34:50.199"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>InventoryManagement</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:50.234" starttime="20190509 14:34:50.216"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:50.234" critical="yes" starttime="20190509 14:34:46.807"></status>
+</test>
+<test id="s1-t2" name="Test2 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากไม่ใส่ชื่อผู้ใช้งาน และรหัสผ่าน">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:34:50.242" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:34:53.318" starttime="20190509 14:34:50.241"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:53.319" starttime="20190509 14:34:50.240"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:34:53.320" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:34:53.587" starttime="20190509 14:34:53.320"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:53.587" starttime="20190509 14:34:53.319"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:53.615" starttime="20190509 14:34:53.588"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:53.615" starttime="20190509 14:34:53.587"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:53.616" critical="yes" starttime="20190509 14:34:50.235"></status>
+</test>
+<test id="s1-t3" name="Test3 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากไม่ใส่ชื่อผู้ใช้งาน">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:34:53.622" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:34:56.577" starttime="20190509 14:34:53.622"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:56.577" starttime="20190509 14:34:53.621"></status>
+</kw>
+<kw name="ใส่รหัสผ่านถูก">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190509 14:34:56.579" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190509 14:34:56.686" starttime="20190509 14:34:56.578"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:56.686" starttime="20190509 14:34:56.577"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:34:56.687" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:34:56.980" starttime="20190509 14:34:56.687"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:56.981" starttime="20190509 14:34:56.686"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:34:57.009" starttime="20190509 14:34:56.983"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:57.010" starttime="20190509 14:34:56.982"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:34:57.010" critical="yes" starttime="20190509 14:34:53.617"></status>
+</test>
+<test id="s1-t4" name="Test4 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากไม่ใส่รหัสผ่าน">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:34:57.017" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:35:00.311" starttime="20190509 14:34:57.016"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:00.311" starttime="20190509 14:34:57.015"></status>
+</kw>
+<kw name="ใส่ชื่อผู้ใช้งานถูก">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190509 14:35:00.313" level="INFO">Typing text 'admin' into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190509 14:35:00.405" starttime="20190509 14:35:00.313"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:00.406" starttime="20190509 14:35:00.312"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:35:00.407" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:35:00.705" starttime="20190509 14:35:00.406"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:00.706" starttime="20190509 14:35:00.406"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:35:00.733" starttime="20190509 14:35:00.709"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:00.733" starttime="20190509 14:35:00.707"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:00.734" critical="yes" starttime="20190509 14:34:57.011"></status>
+</test>
+<test id="s1-t5" name="Test5 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากใส่ชื่อผู้ใช้งานและรหัสผ่านผิด">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:35:00.741" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:35:04.028" starttime="20190509 14:35:00.740"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.029" starttime="20190509 14:35:00.739"></status>
+</kw>
+<kw name="ใส่ชื่อผู้ใช้งานผิด">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>0000</arg>
+</arguments>
+<msg timestamp="20190509 14:35:04.030" level="INFO">Typing password into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190509 14:35:04.121" starttime="20190509 14:35:04.030"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.121" starttime="20190509 14:35:04.029"></status>
+</kw>
+<kw name="ใส่รหัสผ่านผิด">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>0000</arg>
+</arguments>
+<msg timestamp="20190509 14:35:04.122" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190509 14:35:04.219" starttime="20190509 14:35:04.122"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.220" starttime="20190509 14:35:04.121"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:35:04.220" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:35:04.506" starttime="20190509 14:35:04.220"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.506" starttime="20190509 14:35:04.220"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:35:04.537" starttime="20190509 14:35:04.507"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.537" starttime="20190509 14:35:04.506"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:04.537" critical="yes" starttime="20190509 14:35:00.734"></status>
+</test>
+<test id="s1-t6" name="Test6 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากใส่ชื่อผู้ใช้งานผิด">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:35:04.543" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:35:07.729" starttime="20190509 14:35:04.542"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:07.730" starttime="20190509 14:35:04.542"></status>
+</kw>
+<kw name="ใส่ชื่อผู้ใช้งานผิด">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>0000</arg>
+</arguments>
+<msg timestamp="20190509 14:35:07.734" level="INFO">Typing password into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190509 14:35:07.829" starttime="20190509 14:35:07.733"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:07.829" starttime="20190509 14:35:07.731"></status>
+</kw>
+<kw name="ใส่รหัสผ่านถูก">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190509 14:35:07.830" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190509 14:35:07.928" starttime="20190509 14:35:07.829"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:07.928" starttime="20190509 14:35:07.829"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:35:07.928" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:35:08.259" starttime="20190509 14:35:07.928"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:08.259" starttime="20190509 14:35:07.928"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:35:08.280" starttime="20190509 14:35:08.260"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:08.280" starttime="20190509 14:35:08.260"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:08.280" critical="yes" starttime="20190509 14:35:04.538"></status>
+</test>
+<test id="s1-t7" name="Test7 ทดสอบการเข้าสู่ระบบไม่สำเร็จ หากใส่รหัสผ่านผิด">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:35:08.286" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:35:11.440" starttime="20190509 14:35:08.285"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.440" starttime="20190509 14:35:08.284"></status>
+</kw>
+<kw name="ใส่ชื่อผู้ใช้งานถูก">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190509 14:35:11.442" level="INFO">Typing text 'admin' into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190509 14:35:11.536" starttime="20190509 14:35:11.442"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.536" starttime="20190509 14:35:11.441"></status>
+</kw>
+<kw name="ใส่รหัสผ่านผิด">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>0000</arg>
+</arguments>
+<msg timestamp="20190509 14:35:11.537" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190509 14:35:11.629" starttime="20190509 14:35:11.537"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.629" starttime="20190509 14:35:11.536"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:35:11.630" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:35:11.918" starttime="20190509 14:35:11.629"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.918" starttime="20190509 14:35:11.629"></status>
+</kw>
+<kw name="ระบบแสดงข้อความ">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรุณากรอกชื่อผุ้ใช้และรหัสผ่านให้ถูกต้อง</arg>
+</arguments>
+<status status="PASS" endtime="20190509 14:35:11.948" starttime="20190509 14:35:11.919"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.948" starttime="20190509 14:35:11.918"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:11.949" critical="yes" starttime="20190509 14:35:08.281"></status>
+</test>
+<test id="s1-t8" name="Test8 ทดสอบการเข้าสู่ระบบสำเร็จ หากใส่ชื่อผู้ใช้งานและรหัสผ่านที่ถูกต้อง">
+<kw name="เปิดหน้าเข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190509 14:35:11.952" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" endtime="20190509 14:35:17.107" starttime="20190509 14:35:11.952"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:17.107" starttime="20190509 14:35:11.952"></status>
+</kw>
+<kw name="ใส่ชื่อผู้ใช้งานถูก">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190509 14:35:17.109" level="INFO">Typing text 'admin' into text field 'id:username'.</msg>
+<status status="PASS" endtime="20190509 14:35:17.254" starttime="20190509 14:35:17.109"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:17.255" starttime="20190509 14:35:17.108"></status>
+</kw>
+<kw name="ใส่รหัสผ่านถูก">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190509 14:35:17.256" level="INFO">Typing password into text field 'id:password'.</msg>
+<status status="PASS" endtime="20190509 14:35:17.350" starttime="20190509 14:35:17.256"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:17.350" starttime="20190509 14:35:17.255"></status>
+</kw>
+<kw name="กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20190509 14:35:17.351" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" endtime="20190509 14:35:18.459" starttime="20190509 14:35:17.351"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:18.459" starttime="20190509 14:35:17.350"></status>
+</kw>
+<kw name="พบtitleหน้าหลัก">
+<msg timestamp="20190509 14:35:18.482" level="FAIL">No keyword with name 'พบtitleหน้าหลัก' found.</msg>
+<status status="FAIL" endtime="20190509 14:35:18.482" starttime="20190509 14:35:18.482"></status>
+</kw>
+<status status="FAIL" endtime="20190509 14:35:18.483" critical="yes" starttime="20190509 14:35:11.949">No keyword with name 'พบtitleหน้าหลัก' found.</status>
+</test>
+<test id="s1-t9" name="Test teardown">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190509 14:35:18.604" starttime="20190509 14:35:18.484"></status>
+</kw>
+<status status="PASS" endtime="20190509 14:35:18.604" critical="yes" starttime="20190509 14:35:18.484"></status>
+</test>
+<status status="FAIL" endtime="20190509 14:35:18.606" starttime="20190509 14:34:45.380"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="8">Critical Tests</stat>
+<stat fail="1" pass="8">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="O login" pass="8">O login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
